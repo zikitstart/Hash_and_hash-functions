@@ -7,7 +7,7 @@ import java.util.*;
 public final class Recipes {
     private String recipeName;
     private double  totalCostAllProducts;
-    private List<Product> products = new ArrayList<>();
+    private Set<Product> products = new HashSet<>();
 
     public Recipes(String recipeName) {
         this.recipeName = Utility.checkNull(recipeName,"Default");
@@ -17,7 +17,7 @@ public final class Recipes {
         this.products.addAll(Arrays.asList(products));
     }
 
-    public List<Product> getProducts() {
+    public Set<Product> getProducts() {
         return products;
     }
 

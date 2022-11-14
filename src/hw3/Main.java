@@ -5,18 +5,12 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        List<MultiplicationTable> allPairs = new ArrayList<>();
-        for (int first = 2; first <= 9; first++) {
-            for (int second = first; second <= 9; second++) {
-                allPairs.add(new MultiplicationTable(first, second));
-            }
-        }
-        Collections.shuffle(allPairs);
-        List<MultiplicationTable> chosenPairs = allPairs.subList(0, 15);
+        Set<MultiplicationTable> allPairs = new HashSet<>();
+        extracted(allPairs);
 
         System.out.println("ДЗ3 Задача-2.");
-        for (MultiplicationTable chosenPair : chosenPairs) {
-            System.out.println(chosenPair);
+        for (MultiplicationTable allPair : allPairs) {
+            System.out.println(allPair);
         }
 
 
@@ -40,5 +34,16 @@ public class Main {
         System.out.println(passportMap.get("4012_123456"));
         System.out.println(passportMap.get("4012_1256"));
 
+    }
+    private static void extracted(Set<MultiplicationTable> allPairs) {
+        for (int first = 2; first <= 9; first++) {
+            for (int second = first; second <= 9; second++) {
+                if (allPairs.size() != 15){
+                    allPairs.add(new MultiplicationTable(first, second));
+                } else {
+                    break;
+                }
+            }
+        }
     }
 }
