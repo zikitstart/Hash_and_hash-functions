@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        Set<MultiplicationTable> allPairs = new HashSet<>();
+        Set<MultiplicationTable> allPairs = new LinkedHashSet<>();
         extracted(allPairs);
 
         System.out.println("ДЗ3 Задача-2.");

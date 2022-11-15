@@ -23,7 +23,7 @@ public class MultiplicationTable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MultiplicationTable that = (MultiplicationTable) o;
-        return first == that.first && second == that.second;
+        return first == that.first && second == that.second && first == that.second;
     }
 
     @Override

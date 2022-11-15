@@ -19,6 +19,7 @@ public class Main {
         addProduct(products,bananas);
         addProduct(products,zucchini);
         addProduct(products,mandarins);
+        //addProduct(products,mandarins2);
         //addProduct(products,bananas);
 
         for (Product product : products) {
