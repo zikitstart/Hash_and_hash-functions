@@ -5,8 +5,10 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        Set<MultiplicationTable> allPairs = new LinkedHashSet<>();
+        Set<MultiplicationTable> allPairs = new HashSet<>();
         extracted(allPairs);
+        allPairs.add(new MultiplicationTable(3, 2));
+        allPairs.add(new MultiplicationTable(2, 3));
 
         System.out.println("ДЗ3 Задача-2.");
         for (MultiplicationTable allPair : allPairs) {

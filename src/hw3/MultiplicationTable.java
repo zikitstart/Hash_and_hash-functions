@@ -23,12 +23,13 @@ public class MultiplicationTable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MultiplicationTable that = (MultiplicationTable) o;
-        return first == that.first && second == that.second && first == that.second;
+        return (this.first == that.first && this.second == that.second) || (this.first == that.second && this.second == that.first);
     }
+
 
     @Override
     public int hashCode() {
-        return Objects.hash(first, second);
+        return Objects.hash(first*second);
     }
 
     @Override
